@@ -1,3 +1,10 @@
+[![npm](http://img.shields.io/npm/v/grunt-excel-vocabulary.svg?style=flat-square)](https://www.npmjs.com/package/grunt-excel-vocabulary)
+[![npm](http://img.shields.io/npm/l/grunt-excel-vocabulary.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Dependency Status](https://david-dm.org/aliaksandr-pasynkau/grunt-excel-vocabulary.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/grunt-excel-vocabulary)
+[![devDependency Status](https://david-dm.org/aliaksandr-pasynkau/grunt-excel-vocabulary/dev-status.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/grunt-excel-vocabulary#info=devDependencies)
+[![Build Status](https://travis-ci.org/aliaksandr-pasynkau/grunt-excel-vocabulary.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-pasynkau/grunt-excel-vocabulary)
+[![Coverage Status](https://img.shields.io/coveralls/aliaksandr-pasynkau/grunt-excel-vocabulary.svg?style=flat-square)](https://coveralls.io/r/aliaksandr-pasynkau/grunt-excel-vocabulary?branch=master)
+
 # grunt-excel-vocabulary
 
 > The best Grunt plugin ever.
