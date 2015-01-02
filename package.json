@@ -36,8 +36,15 @@
   },
   "devDependencies": {
     "grunt": "~0.4.5",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-nodeunit": "^0.3.3",
-    "node-xlsx": "^0.5.1"
+    "node-xlsx": "^0.5.1",
+    "colors": "~1.0.3",
+    "nodeunit": "~0.9.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "jscoverage": "~0.5.9",
+    "grunt-cli": "~0.1.13",
+    "coveralls": "~2.11.2"
   },
   "peerDependencies": {
     "grunt": "~0.4.5"
