@@ -12,11 +12,10 @@
 
 # package managers
 /npm-debug.log
-/lib-cov
-
-# compile files
 /node_modules
 
+# compile files
+/.tmp
+
 #other
-.coveralls.yml
-/lib-backup
+/lib-cov
