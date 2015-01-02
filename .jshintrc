@@ -1,0 +1,33 @@
+{
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "undef": true,
+  "strict": true,
+  "eqnull": true,
+  "expr": true,
+  "laxbreak": true,
+  "laxcomma": true,
+  "sub": true,
+  "browser": true,
+  "node": true,
+  "globals": {
+    "global": true,
+    "window": true,
+    "Error": true,
+    "RangeError": true,
+    "define": true,
+    "require": true,
+    "module": true,
+    "exports": true,
+    "console": true,
+    "alert": true,
+    "confirm": true,
+    "prompt": true
+  }
+}
