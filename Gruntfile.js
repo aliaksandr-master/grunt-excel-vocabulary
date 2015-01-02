@@ -22,7 +22,11 @@ module.exports = function (grunt) {
 			convert: {
 				expand: true,
 				cwd: 'examples',
-				dest: '.tmp'
+				dest: '.tmp',
+				ext: '.json',
+				src: [
+					'**/*.xlsx'
+				]
 			}
 		},
 
@@ -38,7 +42,7 @@ module.exports = function (grunt) {
 		'nodeunit'
 	]);
 
-	gtunr.registerTask('test', [
+	grunt.registerTask('test', [
 		'default'
 	]);
 
