@@ -1,7 +1,7 @@
 {
   "name": "grunt-excel-vocabulary",
   "description": "The best Grunt plugin ever.",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/aliaksandr-pasynkau/grunt-excel-vocabulary",
   "author": {
     "name": "Aliaksandr Pasynkau",
