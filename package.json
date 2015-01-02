@@ -24,7 +24,12 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test_jshint": "node_modules/.bin/grunt jshint",
+    "test_unit": "node_modules/.bin/nodeunit tests/",
+    "test_unit_cov": "GRUNTEXCELVOC_COV=1 node_modules/.bin/nodeunit --reporter=lcov tests/",
+    "jscov": "node_modules/.bin/jscoverage lib",
+    "test": "npm run test_jshint && npm run test_unit",
+    "coveralls": "npm run jscov && npm run test_unit_cov | node_modules/.bin/coveralls"
   },
   "dependencies": {
     "lodash": "~2.4.1"
