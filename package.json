@@ -7,6 +7,7 @@
     "name": "Aliaksandr Pasynkau",
     "email": "alxe.master@gmail.com"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://aliaksandr-pasynkau@github.com/aliaksandr-pasynkau/grunt-excel-vocabulary.git"
