@@ -33,19 +33,18 @@
     "coveralls": "npm run jscov && npm run test_unit_cov | node_modules/.bin/coveralls"
   },
   "dependencies": {
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "node-xlsx": "~0.5.1"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "node-xlsx": "^0.5.1",
     "colors": "~1.0.3",
-    "nodeunit": "~0.9.0",
-    "grunt-contrib-jshint": "~0.10.0",
-    "jscoverage": "~0.5.9",
+    "coveralls": "~2.11.2",
+    "grunt": "~0.4.5",
     "grunt-cli": "~0.1.13",
-    "coveralls": "~2.11.2"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "jscoverage": "~0.5.9",
+    "nodeunit": "~0.9.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.5"
