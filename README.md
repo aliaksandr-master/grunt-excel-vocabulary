@@ -64,12 +64,26 @@ In this example, the default options are used to do something with whatever. So 
 ```js
 grunt.initConfig({
   excel_vocabulary: {
-    options: {
-      beautify: false
-    }
-    files: {
-      'translations.json': 'translation.xlsx'
+    first: {
+      options: {
+        beautify: false
+      }
+      files: [
+        { 'translations.json': 'translation.xlsx' },
+        { src: 'translation.xlsx', dest: 'translation.json' }
+      ],
     },
+    second: {
+      files: [{
+        expand: true,
+        cwd: 'path/to/source/dir',
+        dest: 'path/to/build/dir',
+        src: [
+          '**/*.xlsx'
+        ],
+        ext: '.json'
+      }],
+    }
   },
 });
 ```
