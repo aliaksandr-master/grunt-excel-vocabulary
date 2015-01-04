@@ -32,22 +32,36 @@ module.exports = function (grunt) {
 
 		nodeunit: {
 			tests: [ 'tests/*.js' ]
+		},
+
+		watch: {
+			files: [
+				'lib/**/*',
+				'tests/**/*',
+				'tasks/**/*',
+				'examples/**/*'
+			],
+			tasks: [
+				'test'
+			]
 		}
 	});
 
 	grunt.registerTask('default', [
+		'test',
+		'watch'
+	]);
+
+	grunt.registerTask('test', [
 		'jshint',
 		'clean',
 		'excel_vocabulary',
 		'nodeunit'
 	]);
 
-	grunt.registerTask('test', [
-		'default'
-	]);
-
 	grunt.loadTasks('tasks');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 };

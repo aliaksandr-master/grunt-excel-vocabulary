@@ -43,6 +43,7 @@
     "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-watch": "~0.6.1",
     "jscoverage": "~0.5.9",
     "nodeunit": "~0.9.0"
   },
