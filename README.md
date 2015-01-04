@@ -56,6 +56,20 @@ Default value: `true`
 
 For beautify output JSON in file
 
+#### options.set
+Type: `Function`
+
+By default:
+```js
+set: function (resultJsonObject, columnName, sheetName, key, value) {
+    if (!resultJsonObject.hasOwnProperty(columnName)) {
+        resultJsonObject[columnName] = {};
+    }
+
+    resultJsonObject[columnName][key] = value;
+}
+```
+
 ### Usage Examples
 
 #### Default Options
@@ -93,3 +107,4 @@ First row is a column names. First column of each row will be a key name.
 
 Example:
 ![file example](/doc/sheet_screen.png?raw=true)
+(cell colors is not matter)

@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 
                 return true;
 			}).forEach(function (srcFilePath) {
-				var resultJson = parse(path.resolve(options.root, srcFilePath));
+				var resultJson = parse(path.resolve(options.root, srcFilePath), options);
 				var resultJsonString = JSON.stringify(resultJson, null, options.beautify ? 4 : null);
 
 				grunt.file.write(f.dest, resultJsonString);
