@@ -87,3 +87,9 @@ grunt.initConfig({
   },
 });
 ```
+
+## Excel File:
+First row is a column names. First column of each row will be a key name.
+
+Example:
+![file example](/doc/sheet_screen.png?raw=true)
