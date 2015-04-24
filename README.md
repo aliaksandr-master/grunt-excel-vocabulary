@@ -58,6 +58,12 @@ Default value: `true`
 
 For beautify output JSON in file
 
+#### options.keepEveryRowInFile 
+Type: `boolean`
+Default value: `false`
+
+For writting language entries into separated json files
+
 #### options.set
 Type: `Function`
 
