@@ -21,16 +21,18 @@ module.exports = function (grunt) {
                 return true;
 			}).forEach(function (srcFilePath) {
 				var resultJson = parse(path.resolve(options.root, srcFilePath), options);
+				var resultJsonString;
 
 				if(options.keepEveryRowInFile){
-					for(var i in resultJson){
-						var resultJsonString = JSON.stringify(resultJson[i], null, options.beautify ? 4 : null);
+					var count = resultJson.length;
+					for(var i=0; i<count; i++){
+						resultJsonString = JSON.stringify(resultJson[i], null, options.beautify ? 4 : null);
 						grunt.file.write(f.dest + i.toLowerCase() + ( f.ext || ".json"), resultJsonString);
 						grunt.log.writeln('File "' + (f.dest + i.toLowerCase() ) + '" created.');
 					}
 				}
 				else{
-					var resultJsonString = JSON.stringify(resultJson, null, options.beautify ? 4 : null);
+					resultJsonString = JSON.stringify(resultJson, null, options.beautify ? 4 : null);
 					grunt.file.write(f.dest, resultJsonString);
 					grunt.log.writeln('File "' + f.dest + '" created.');
 				}
