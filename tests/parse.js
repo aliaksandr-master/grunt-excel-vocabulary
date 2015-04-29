@@ -1,28 +1,36 @@
-
-"use strict";
+'use strict';
 
 var parse = require('./lib/parse');
+var path = require('path');
 
-module.exports['file with one empty sheet'] = function (test) {
+var EXAMPLE_DIR = path.join(__dirname, '/../examples');
+
+exports['file with one empty sheet'] = function (test) {
 	test.doesNotThrow(function () {
-		var json = parse(__dirname + '/../examples/one-empty-sheet.xlsx');
-		test.deepEqual(json, require(__dirname + '/../examples/one-empty-sheet.json'));
+		var json = parse(path.join(EXAMPLE_DIR, '/one-empty-sheet.xlsx'));
+
+		test.deepEqual(json, require(path.join(EXAMPLE_DIR, '/one-empty-sheet.json')));
 	});
+
 	test.done();
 };
 
-module.exports['file with one non empty sheet'] = function (test) {
+exports['file with one non empty sheet'] = function (test) {
 	test.doesNotThrow(function () {
-		var json = parse(__dirname + '/../examples/one-non-empty-sheet.xlsx');
-		test.deepEqual(json, require(__dirname + '/../examples/one-non-empty-sheet.json'));
+		var json = parse(path.join(EXAMPLE_DIR, '/one-non-empty-sheet.xlsx'));
+
+		test.deepEqual(json, require(path.join(EXAMPLE_DIR, '/one-non-empty-sheet.json')));
 	});
+
 	test.done();
 };
 
-module.exports['file with two non empty sheet'] = function (test) {
+exports['file with two non empty sheet'] = function (test) {
 	test.doesNotThrow(function () {
-		var json = parse(__dirname + '/../examples/two-non-empty-sheets.xlsx');
-		test.deepEqual(json, require(__dirname + '/../examples/two-non-empty-sheets.json'));
+		var json = parse(path.join(EXAMPLE_DIR, '/two-non-empty-sheets.xlsx'));
+
+		test.deepEqual(json, require(path.join(EXAMPLE_DIR, '/two-non-empty-sheets.json')));
 	});
+
 	test.done();
 };
