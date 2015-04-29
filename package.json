@@ -25,12 +25,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test_lint": "node_modules/.bin/grunt eslint",
-    "test_unit": "node_modules/.bin/nodeunit tests/",
-    "test_unit_cov": "GRUNTEXCELVOC_COV=1 node_modules/.bin/nodeunit --reporter=lcov tests/",
-    "jscov": "node_modules/.bin/jscoverage lib",
-    "test": "npm run test_lint && npm run test_unit",
-    "coveralls": "npm run jscov && npm run test_unit_cov | node_modules/.bin/coveralls"
+    "test": "node_modules/.bin/grunt eslint && node_modules/.bin/nodeunit tests/"
   },
   "dependencies": {},
   "devDependencies": {

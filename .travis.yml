@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.11"
-after_script:
-  - npm run coveralls
+  - "stable"
+  - "unstable"
+script: "node_modules/.bin/grunt eslint && node_modules/.bin/jscoverage lib && GRUNTEXCELVOC_COV=1 node_modules/.bin/nodeunit --reporter=lcov tests/ | node_modules/.bin/coveralls"
 notifications:
   email:
     on_success: never
