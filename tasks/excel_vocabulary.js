@@ -1,42 +1,38 @@
 'use strict';
 
-var path = require('path');
 var parse = require('./../lib/parse');
+var gruntProcess = require('grunt-process/lib');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('excel_vocabulary', function () {
 		var options = this.options({
-			root: process.cwd(),
 			beautify: true,
 			keepEveryRowInFile: false
 		});
 
-		this.files.forEach(function (f) {
-			f.src.filter(function (filepath) {
-				if (!grunt.file.exists(filepath)) {
-					grunt.log.warn('Source file "' + filepath + '" not found.');
-					return false;
-				}
+		gruntProcess(grunt, this.files, {
+			read: function (src, dest, fileObject) {
+				return parse(src, options);
+			},
 
-				return true;
-			}).forEach(function (srcFilePath) {
-				var resultJson = parse(path.resolve(options.root, srcFilePath), options);
-				var resultJsonString;
+			save: function (src, dest, resultJson, fileObject) {
+				var files = {};
 
 				if (options.keepEveryRowInFile) {
 					var count = resultJson.length;
+					var filename;
 
 					for (var i = 0; i < count; i++) {
-						resultJsonString = JSON.stringify(resultJson[i], null, options.beautify ? 4 : null);
-						grunt.file.write(f.dest + i.toLowerCase() + (f.ext || '.json'), resultJsonString);
-						grunt.log.writeln('File "' + f.dest + i.toLowerCase() + '" created.');
+						filename = dest.replace(/(.\[a-zA-Z0-9]+)$/, i.toLowerCase() + '$1');
+						files[filename] = JSON.stringify(resultJson[i], null, options.beautify ? 4 : null);
 					}
 				} else {
-					resultJsonString = JSON.stringify(resultJson, null, options.beautify ? 4 : null);
-					grunt.file.write(f.dest, resultJsonString);
-					grunt.log.writeln('File "' + f.dest + '" created.');
+					files[dest] = JSON.stringify(resultJson, null, options.beautify ? 4 : null);
 				}
-			});
-		});
+
+				return files;
+			}
+		}, this.async());
+
 	});
 };
