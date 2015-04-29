@@ -1,7 +1,7 @@
 {
   "name": "grunt-excel-vocabulary",
   "description": "Grunt plugin for convertion xlsx files to json. For multilanguage interfaces, and other",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "homepage": "https://github.com/aliaksandr-pasynkau/grunt-excel-vocabulary",
   "author": {
     "name": "Aliaksandr Pasynkau",
