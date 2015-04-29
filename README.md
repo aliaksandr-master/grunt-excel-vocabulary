@@ -116,3 +116,19 @@ First row is a column names. First column of each row will be a key name.
 Example:
 ![file example](/doc/sheet_screen.png?raw=true)
 (cell colors is not matter)
+
+## License
+MIT
+
+## Support
+If you have any problems, catch the bug or have any suggestion - please [find an existing issue or create new](https://github.com/aliaksandr-pasynkau/grunt-excel-vocabulary/issues)
+
+## Contributing
+Do that! [How to contribute open-source projects](https://guides.github.com/activities/contributing-to-open-source/)
+
+run the tests by following command
+```shell
+$ npm test
+```
+
+### Together we can change the world!
