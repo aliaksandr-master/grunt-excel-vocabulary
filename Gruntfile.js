@@ -9,23 +9,20 @@ module.exports = require('grunto')(function (grunt) {
 	]);
 
 	grunt.registerTask('test', [
-		'jshint',
+		'eslint',
 		'clean',
 		'excel_vocabulary',
 		'nodeunit'
 	]);
 
 	return {
-		jshint: {
+		eslint: {
 			all: [
 				'Gruntfile.js',
 				'tasks/*.js',
 				'lib/*.js',
 				'<%= nodeunit.tests %>'
-			],
-			options: {
-				jshintrc: '.jshintrc'
-			}
+			]
 		},
 
 		clean: [

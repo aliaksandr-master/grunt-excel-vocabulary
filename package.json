@@ -25,11 +25,11 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test_jshint": "node_modules/.bin/grunt jshint",
+    "test_lint": "node_modules/.bin/grunt eslint",
     "test_unit": "node_modules/.bin/nodeunit tests/",
     "test_unit_cov": "GRUNTEXCELVOC_COV=1 node_modules/.bin/nodeunit --reporter=lcov tests/",
     "jscov": "node_modules/.bin/jscoverage lib",
-    "test": "npm run test_jshint && npm run test_unit",
+    "test": "npm run test_lint && npm run test_unit",
     "coveralls": "npm run jscov && npm run test_unit_cov | node_modules/.bin/coveralls"
   },
   "dependencies": {},
@@ -39,9 +39,9 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-eslint": "^12.0.0",
     "grunto": "^1.3.6",
     "jscoverage": "^0.5.9",
     "lodash": "^3.7.0",
