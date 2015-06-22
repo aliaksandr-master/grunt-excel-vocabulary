@@ -4,7 +4,6 @@
   },
   "rules": {
     "comma-dangle": [2, "never"],
-    "no-cond-assign": [2, "never"],
     "no-constant-condition": 2,
     "no-control-regex": 0,
     "no-console": 1,
