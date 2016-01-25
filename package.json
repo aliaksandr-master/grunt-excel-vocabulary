@@ -28,17 +28,17 @@
     "test": "node_modules/.bin/grunt eslint && node_modules/.bin/nodeunit tests/"
   },
   "dependencies": {
-    "grunt-process": "^1.0.3",
-    "lodash": "^3.7.0",
-    "node-xlsx": "^0.5.1"
+    "grunt-process": "^1.1.4",
+    "lodash": "^4.0.1",
+    "node-xlsx": "^0.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-clean": "^0.7.0",
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-eslint": "^15.0.0",
-    "grunto": "^1.3.6",
+    "grunt-eslint": "^17.3.1",
+    "grunto": "^3.0.1",
     "nodeunit": "^0.9.1"
   },
   "keywords": [

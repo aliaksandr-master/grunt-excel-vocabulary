@@ -32,7 +32,7 @@ exports['Parses the values into boolean or integer'] = function (test) {
 	test.doesNotThrow(function () {
 		var options = {
 			isColumnOriented: true,
-            parseValues: true
+			parseValues: true
 		};
 		var json = parse(path.join(EXAMPLE_DIR, '/column-oriented.xlsx'), options);
 
