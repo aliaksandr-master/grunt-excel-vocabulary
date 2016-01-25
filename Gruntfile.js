@@ -17,6 +17,9 @@ module.exports = require('grunto')(function (grunt) {
 
 	return {
 		eslint: {
+			options: {
+				configFile: '.eslintrc.json'
+			},
 			all: [
 				'Gruntfile.js',
 				'tasks/*.js',

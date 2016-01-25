@@ -1,0 +1,3 @@
+[ { "rows": "row1", "key.first": "content 1", "key.second": "true" },
+  { "rows": "row2", "key.first": "content 2", "key.second": "false" },
+  { "rows": "row3", "key.first": "content 3", "key.second": "10" } ]

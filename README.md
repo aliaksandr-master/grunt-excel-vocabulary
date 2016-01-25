@@ -52,22 +52,36 @@ Default value: `process.cwd()`
 
 if you need put your translation excel files somewhere in file system, not in process.cwd
 
+#### options.parseValues
+Type: `Boolean`
+Default value: `false`
+
+If set to true will parse values into integer or boolean when they are strings with boolean or integer shape.
+
 #### options.beautify
 Type: `String`
 Default value: `true`
 
 For beautify output JSON in file
 
-#### options.keepEveryRowInFile 
+#### options.keepEveryRowInFile
 Type: `boolean`
 Default value: `false`
 
 For writting language entries into separated json files
 
+#### options.isColumnOriented
+Type: `Boolean`
+Default value: `false`
+
+If this value is set to true, then the json object will be created based on columns of the
+excel file. This means that the output will be an array of objects, in which, each object
+will have as key the first row, and as value the text inside the next rows.
+
 #### options.set
 Type: `Function`
 
-By default:
+Function that loads the json object with the data of the row in the excel file. By default:
 ```js
 set: function (resultJsonObject, columnName, sheetName, key, value) {
     if (!resultJsonObject.hasOwnProperty(columnName)) {
@@ -75,6 +89,21 @@ set: function (resultJsonObject, columnName, sheetName, key, value) {
     }
 
     resultJsonObject[columnName][key] = value;
+}
+```
+
+#### options.setColumn
+Type: `Function`
+
+If the option 'isColumnOriented' is set to true, this function will be called
+when loading the column data. By default:
+```js
+setColumn: function (columnData, columnName, sheetName, key, value) {
+    var row = {};
+
+    row[ columnName ] = value;
+
+    return row;
 }
 ```
 
