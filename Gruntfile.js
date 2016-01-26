@@ -2,6 +2,7 @@
 
 module.exports = require('grunto')(function (grunt) {
 	grunt.loadTasks('tasks');
+	require('load-grunt-tasks')(grunt);
 
 	grunt.registerTask('default', [
 		'test',
