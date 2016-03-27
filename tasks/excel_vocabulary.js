@@ -7,7 +7,8 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('excel_vocabulary', function () {
 		var options = this.options({
 			beautify: true,
-			keepEveryRowInFile: false
+			keepEveryRowInFile: false,
+			isColumnOriented: false
 		});
 
 		gruntProcess(grunt, this.files, {
@@ -24,10 +25,11 @@ module.exports = function (grunt) {
 
 					for (var i = 0; i < count; i++) {
 						filename = dest.replace(/(.\[a-zA-Z0-9]+)$/, i.toLowerCase() + '$1');
-						files[filename] = JSON.stringify(resultJson[i], null, options.beautify ? 4 : null);
+
+						files[ filename ] = JSON.stringify(resultJson[ i ], null, options.beautify ? 4 : null);
 					}
 				} else {
-					files[dest] = JSON.stringify(resultJson, null, options.beautify ? 4 : null);
+					files[ dest ] = JSON.stringify(resultJson, null, options.beautify ? 4 : null);
 				}
 
 				return files;
